@@ -1,5 +1,5 @@
 // vars/sayHello.groovy
-def call(String a = 'human') {
+def call(String a = 'danger') {
 if ( a == "SUCCESS" ) {
     slackSend color: "good", message: "Job: ${env.JOB_NAME} with buildnumber ${env.BUILD_NUMBER} was successful"
   }
