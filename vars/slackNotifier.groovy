@@ -1,11 +1,5 @@
-
-
-
-/*def call(String name = 'human') {
-*/
-
-def call(String a = 'SUCCESS' ) {
-  if ( a == "SUCCESS" ) {
+def call(String a = 'danger') {
+if ( a == "SUCCESS" ) {
     slackSend color: "good", message: "Job: ${env.JOB_NAME} with buildnumber ${env.BUILD_NUMBER} was successful"
   }
   else if( a == "FAILURE" ) { 
@@ -16,5 +10,5 @@ def call(String a = 'SUCCESS' ) {
   }
   else {
     slackSend color: "danger", message: "Job: ${env.JOB_NAME} with buildnumber ${env.BUILD_NUMBER} its resulat was unclear"	
-  }
+  }  
 }
