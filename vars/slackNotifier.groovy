@@ -4,14 +4,14 @@
 /*def call(String name = 'human') {
 */
 
-def call(String buildResult = 'SUCCESS' ) {
-  if ( buildResult == "SUCCESS" ) {
+def call(String a = 'SUCCESS' ) {
+  if ( a == "SUCCESS" ) {
     slackSend color: "good", message: "Job: ${env.JOB_NAME} with buildnumber ${env.BUILD_NUMBER} was successful"
   }
-  else if( buildResult == "FAILURE" ) { 
+  else if( a == "FAILURE" ) { 
     slackSend color: "danger", message: "Job: ${env.JOB_NAME} with buildnumber ${env.BUILD_NUMBER} was failed"
   }
-  else if( buildResult == "UNSTABLE" ) { 
+  else if( a == "UNSTABLE" ) { 
     slackSend color: "warning", message: "Job: ${env.JOB_NAME} with buildnumber ${env.BUILD_NUMBER} was unstable"
   }
   else {
